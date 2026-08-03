@@ -96,10 +96,9 @@ export default function App() {
                             _hover={{transform: "scale(1.05)", bg: "white"}}
                             onClick={() => document.getElementById('support')?.scrollIntoView({behavior: 'smooth'})}
                         >
-                            SAW THANKS? BUY ME A BEER
+                            WANNA SAY THANKS?
                         </Button>
                     </HStack>
-
                 </VStack>
             </Flex>
 
