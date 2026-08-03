@@ -1,11 +1,10 @@
 import {useState} from 'react';
-import {Box, Text, Button, HStack} from '@chakra-ui/react';
+import {Box, Text, Button} from '@chakra-ui/react';
 import {COOKIE_CONSENT_EVENT} from '../../hooks/useCookieConsent';
 
 const STORAGE_KEY = 'cookie_consent_the_local_guy';
 
 export function CookieBanner() {
-
     const [visible, setVisible] = useState(() => {
         return localStorage.getItem(STORAGE_KEY) === null;
     });
@@ -14,12 +13,6 @@ export function CookieBanner() {
 
     const handleAccept = () => {
         localStorage.setItem(STORAGE_KEY, 'accepted');
-        window.dispatchEvent(new Event(COOKIE_CONSENT_EVENT));
-        setVisible(false);
-    };
-
-    const handleDecline = () => {
-        localStorage.setItem(STORAGE_KEY, 'declined');
         window.dispatchEvent(new Event(COOKIE_CONSENT_EVENT));
         setVisible(false);
     };
@@ -48,37 +41,23 @@ export function CookieBanner() {
                 gap={4}
             >
                 <Text flex="1" fontSize="sm" color="#4A3728" fontWeight="600" lineHeight="1.6">
-                    We use "Sheftalies" aka Cookies to keep this site running.
-                    We don't track you, we don't collect data, we just suggest the best spots.
+                    We use "Sheftalies", aka "cookies" for basic site functionality.
+                    We don’t track you or collect personal data.
                 </Text>
 
-                <HStack gap={3} w={{base: 'full', md: 'auto'}} justify="flex-end">
-                    <Button
-                        size="sm"
-                        variant="ghost"
-                        color="#4A3728"
-                        borderRadius="full"
-                        px={6}
-                        fontWeight="bold"
-                        _hover={{bg: "rgba(74, 55, 40, 0.05)"}}
-                        onClick={handleDecline}
-                    >
-                        NAH..
-                    </Button>
-                    <Button
-                        size="sm"
-                        bg="#4A3728"
-                        color="white"
-                        borderRadius="full"
-                        px={8}
-                        fontWeight="900"
-                        _hover={{bg: '#2D1F16', transform: 'scale(1.05)'}}
-                        transition="all 0.2s"
-                        onClick={handleAccept}
-                    >
-                        PASS THE LEMON
-                    </Button>
-                </HStack>
+                <Button
+                    size="sm"
+                    bg="#4A3728"
+                    color="white"
+                    borderRadius="full"
+                    px={8}
+                    fontWeight="900"
+                    _hover={{bg: '#2D1F16', transform: 'scale(1.05)'}}
+                    transition="all 0.2s"
+                    onClick={handleAccept}
+                >
+                    PASS THE LEMON
+                </Button>
             </Box>
         </Box>
     );
