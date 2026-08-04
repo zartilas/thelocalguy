@@ -9,7 +9,8 @@ import {
     PiCirclesFour,
     PiPersonSimpleSwim,
     PiMapPinArea,
-    PiBeerSteinFill
+    PiBeerSteinFill,
+    PiCopyright
 } from "react-icons/pi";
 import {FaAngleLeft, FaAngleRight} from 'react-icons/fa';
 import {SiGooglemaps, SiPaypal, SiRevolut} from "react-icons/si";
@@ -86,7 +87,7 @@ export default function Home() {
 
                         <Button
                             size="lg"
-                            bg="rgba(255, 253, 245, 0.9)"
+                            bg="rgba(255,253,245,0.85)"
                             color="#4A3728"
                             px="8"
                             height="14"
@@ -260,7 +261,7 @@ export default function Home() {
                         {filtered.map((loc, i) => (
                             <Box
                                 key={i}
-                                bg="white"
+                                bg="rgba(255,253,245,0.85)"
                                 p="6"
                                 borderRadius="2xl"
                                 border="1px solid"
@@ -298,7 +299,7 @@ export default function Home() {
                                         </Box>
                                         <Badge
                                             size="sm"
-                                            bg="#EDF2F7"
+                                            bg="rgba(74,55,40,0.15)"
                                             color="#4A5568"
                                             borderRadius="lg"
                                             px="2"
@@ -326,7 +327,7 @@ export default function Home() {
                                             borderRadius="xl"
                                             bg="#4A3728"
                                             color="white"
-                                            _hover={{bg: "#4285F4", color: "white"}}
+                                            _hover={{bg: "#2D1F16"}}
                                             fontWeight="semibold"
                                             fontSize="11px"
                                             display="flex"
@@ -570,7 +571,8 @@ export default function Home() {
                     </Link>
                 </Text>
                 <Text fontSize="13px" color="#9a8070" letterSpacing="0.05em">
-                    © {new Date().getFullYear()} The Local Guy. All rights reserved.
+                    <PiCopyright style={{display: 'inline', position: 'relative', bottom: '1px', marginRight: '4px'}}/>
+                    {new Date().getFullYear()} The Local Guy. All rights reserved.
                 </Text>
             </Box>
         </Box>
