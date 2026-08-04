@@ -1,0 +1,52 @@
+import {Box, Heading, Text, Button} from '@chakra-ui/react'
+import {Link} from 'react-router-dom'
+
+export function NotFound() {
+    return (
+        <Box bg="#4E5B31" color="#4A3728" minH="100vh" w="100%" overflowX="hidden">
+            <Box
+                textAlign="center"
+                py={24}
+                px={6}
+                bg="#4E5B31"
+                color="#4A3728"
+                minH="100vh"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Heading
+                    fontSize="8xl"
+                    mb={5}
+                    color="#D4AF37"
+                    textShadow="2px 2px 0 #4A3728"
+                >
+                    404
+                </Heading>
+                <Text fontSize="3xl" m={6} fontWeight="bold">
+                    Of all the spots to visit, you landed here?
+                </Text>
+                <Text fontSize="xl" mb={8} fontStyle="italic">
+                    Looks like this page isn't on the map
+                </Text>
+                <Link to="/">
+                    <Button
+                        size="lg"
+                        bg="#4A3728"
+                        color="white"
+                        px="8"
+                        borderRadius="full"
+                        fontWeight="900"
+                        _hover={{
+                            transform: "scale(1.05)",
+                            bg: "#2D1F16"
+                        }}
+                    >
+                        Take me back to the spots
+                    </Button>
+                </Link>
+            </Box>
+        </Box>
+    )
+}
