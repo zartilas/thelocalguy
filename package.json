@@ -1,5 +1,6 @@
 {
   "name": "thelocalguy",
+  "private": true,
   "version": "0.1.0",
   "type": "module",
   "homepage": "https://zartilas.github.io/thelocalguy/",
