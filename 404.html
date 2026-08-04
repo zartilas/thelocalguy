@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script>
+        sessionStorage.setItem('redirectPath', location.pathname);
+        // Redirect στο index.html
+        location.replace('/');
+    </script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
