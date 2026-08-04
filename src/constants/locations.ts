@@ -73,7 +73,7 @@ export const locations = [
     },
     {
         name: "Robustos Cava",
-        subname: "The best coffee in Town",
+        subname: "The best coffee in town",
         city: "Ammochostos",
         village: "Paralimni",
         category: "Food",
@@ -226,7 +226,7 @@ export const locations = [
             apple: "APPLE_LINK",
             open: "OPENSTREETMAP_LINK",
         },
-    },,
+    },
     {
         name: "Melitzia Taverna",
         subname: "Cypriot traditional tavern",
