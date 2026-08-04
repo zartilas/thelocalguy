@@ -1,20 +1,15 @@
-// main.tsx
-import { StrictMode } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Provider } from './components/ui/provider'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import App from './App.tsx'
-import { NotFound } from './NotFound'
+import { BrowserRouter } from 'react-router-dom'
+import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <Provider>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<App />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-            </Router>
-        </Provider>
-    </StrictMode>,
+    <React.StrictMode>
+        <ChakraProvider value={defaultSystem}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </ChakraProvider>
+    </React.StrictMode>
 )
