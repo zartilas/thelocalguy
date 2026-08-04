@@ -215,4 +215,28 @@ export const locations = [
             open: "OPENSTREETMAP_LINK",
         },
     },
+    {
+        name: "The Brewing Hand",
+        subname: "Beer House",
+        city: "Larnaca",
+        village: "Chrysopolitissa",
+        category: "Food",
+        maps: {
+            google: "https://maps.app.goo.gl/QELtK4jHpRqkuoMT8",
+            apple: "APPLE_LINK",
+            open: "OPENSTREETMAP_LINK",
+        },
+    },,
+    {
+        name: "Melitzia Taverna",
+        subname: "Cypriot traditional tavern",
+        city: "Paphos",
+        village: "Tala",
+        category: "Food",
+        maps: {
+            google: "https://maps.app.goo.gl/SGgooMhA9Vhj9cx26",
+            apple: "APPLE_LINK",
+            open: "OPENSTREETMAP_LINK",
+        },
+    },
 ]
