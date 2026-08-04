@@ -2,10 +2,14 @@
   "name": "thelocalguy",
   "version": "0.1.0",
   "type": "module",
+  "homepage": "https://zartilas.github.io/thelocalguy/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -u \"github-actions-bot <github-actions@github.com>\" --repo https://x-access-token:${GITHUB_TOKEN}@github.com/zartilas/thelocalguy.git"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.36.1",
@@ -23,6 +27,7 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.3.2",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.6.2",
     "vite": "^7.1.6"
   }
