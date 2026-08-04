@@ -531,14 +531,14 @@ export default function Home() {
 
                     <VStack gap="3">
                         <Text fontSize="md" color="rgba(255,253,245,0.85)" fontStyle="italic" lineHeight="tall">
-                            Just a heads up: I’m sharing my personal favorites. I don’t own these places, and I don’t
-                            get paid to list them.<br/>
+                            Just a heads up: I’m sharing my personal favorites. I don't own these places nor get paid to
+                            advertise them.<br/>
                             Things change, so double-check before you go.
                         </Text>
 
                         <Text fontSize="md" color="rgba(255,253,245,0.85)" lineHeight="tall">
-                            We might have different tastes and preferences, so if you don’t like a place... <br/>it’s
-                            probably your company's fault, call me the next time!!
+                            We might have a different taste or preferences, so if you don't like a place... <br/>it's
+                            probably your company's fault, call me next time instead!!
                         </Text>
 
                         <Text fontSize="sm" color="rgba(255,253,245,0.85)">
