@@ -17,6 +17,8 @@ import {SiGooglemaps, SiPaypal, SiRevolut} from "react-icons/si";
 import {LiaBeerSolid} from "react-icons/lia";
 import {GiHeartOrgan} from "react-icons/gi";
 import {locations} from "../constants/locations.ts";
+import BitcoinButton from "../components/ui/bitcoin-button.tsx";
+import {CiShare1} from "react-icons/ci";
 
 
 export default function Home() {
@@ -457,7 +459,26 @@ export default function Home() {
                         If you found a spot you loved and want to say thanks, feel free to support the guide!!
                     </Text>
 
-                    <SimpleGrid columns={{base: 1, md: 3}} gap="4" w="100%">
+                    <SimpleGrid columns={{base: 1, md: 2}} gap="4" w="100%">
+                        <Link
+                            href="https://revolut.me/zartilas/pocket/wJcrVSIqT1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="center"
+                            h="14"
+                            bg="#4A3728"
+                            color="white"
+                            borderRadius="xl"
+                            fontWeight="bold"
+                            textDecoration="none"
+                            _hover={{bg: "#2D1F16", transform: "translateY(-2px)"}}
+                            transition="all 0.2s"
+                        >
+                            <SiRevolut/> REVOLUT <CiShare1/>
+                        </Link>
+
                         <Link
                             href="https://paypal.me/zartilas"
                             target="_blank"
@@ -474,26 +495,7 @@ export default function Home() {
                             _hover={{bg: "#2D1F16", transform: "translateY(-2px)"}}
                             transition="all 0.2s"
                         >
-                            <SiPaypal/> PAYPAL
-                        </Link>
-
-                        <Link
-                            href="https://revolut.me/zartilas"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            h="14"
-                            bg="#4A3728"
-                            color="white"
-                            borderRadius="xl"
-                            fontWeight="bold"
-                            textDecoration="none"
-                            _hover={{bg: "#2D1F16", transform: "translateY(-2px)"}}
-                            transition="all 0.2s"
-                        >
-                            <SiRevolut/> REVOLUT
+                            <SiPaypal/> PAYPAL <CiShare1/>
                         </Link>
 
                         <Link
@@ -514,8 +516,9 @@ export default function Home() {
                         >
                             <Box fontSize="22px">
                                 <PiBeerSteinFill/>
-                            </Box> BUY ME A BEER
+                            </Box> BUY ME A BEER <CiShare1/>
                         </Link>
+                        <BitcoinButton/>
                     </SimpleGrid>
                 </VStack>
             </Box>
@@ -542,7 +545,7 @@ export default function Home() {
                             probably your company's fault, call me next time instead!!
                         </Text>
 
-                        <Text fontSize="sm" color="rgba(255,253,245,0.85)">
+                        <Text fontSize="md" color="rgba(255,253,245,0.85)">
                             Have a beer for me too!!
                         </Text>
                     </VStack>
